@@ -1,4 +1,4 @@
-# react-props-practice1
+# react-props-self-assessment: Hello World
 
 ## Instructions:
 
@@ -8,13 +8,13 @@
 
 ## Deliverables:
 
+### Header
 - You are provided a `Header` component that is rendered inside of `App`
-- `Header` should have a key called "header", inside of its `props`, that evaluates to a string of your choice
-- Header should append the value of its "header" prop to the DOM
+- `Header` should have a `text` key in its props that evaluates to a string that says "Hello World"
+- Header should append the value of this prop to the DOM
 
-- You are also provided a `NotesContainer` which is responsible for rendering multiple `Note` components
-- The `NotesContainer` component has an `apiResponse` method that returns an array of notes
-- Each `Note` component should be able to access the `content` key inside of its props and print the value of the `content` key to the DOM as a `li` tag
-
+### Notes Container
+- `NotesContainer` has an `apiResponse` method that returns an array of note objects
+- `NotesContainer` is responsible for rendering multiple `Note` components
+- Each `Note` component should be able to access the `note` key inside of its props and print the value of the note's `content` to the DOM as a `li` tag
 - The `NotesContainer` should be rendered underneath the `Header` on the DOM
-# react-props-self-assessment
