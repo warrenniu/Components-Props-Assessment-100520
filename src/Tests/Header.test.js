@@ -1,33 +1,18 @@
 import React from 'react';
-import { render, unmountComponentAtNode } from 'react-dom';
-import { act } from 'react-dom/test-utils';
+import { render, screen } from '@testing-library/react'
 import Header from '../Components/Header';
 import App from '../App';
 
-let container = null;
-beforeEach(() => {
-    container = document.createElement("div");
-    document.body.appendChild(container);
-});
-afterEach(() => {
-    unmountComponentAtNode(container);
-    container.remove();
-    container = null;
-});
 
 describe("Header", () => {
-    it("Mounts to the DOM", () => {
-        act(() => {
-            render(<App />, container);
-            expect(container.querySelector('h1')).toBeTruthy();
-        });
+    test("Mounts to the DOM", () => {
+        let { container } = render(<App />);
+        expect(container.querySelector('h1')).toBeTruthy();
     });
 
-    it("Renders props to DOM", () => {
-        act(() => {
-            render(<Header text="Hello World" />, container);
-            expect(container.querySelector('h1').textContent).toBe("Hello World");
-        });
+    test("Renders props to DOM", () => {
+        render(<Header text="Hello World" />);
+        expect(screen.getByText("Hello World")).toBeTruthy();
 
     });
 });
