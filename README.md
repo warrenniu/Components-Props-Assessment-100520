@@ -17,4 +17,4 @@
 - Each `Note` component should be able to access the `note` key inside of its props and print the value of the note's `content` to the DOM as a `li` tag
 - The `NotesContainer` should be rendered underneath the `Header` on the DOM
 
-- You can run `npm run lab` to test your code. However, you should use both TDD and BDD to confirm functionality
+- You can run `npm run lab` to test your code. However, you should use both TDD and BDD to confirm successful functionality
