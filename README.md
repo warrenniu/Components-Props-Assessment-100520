@@ -18,4 +18,3 @@
 - The `NotesContainer` should be rendered underneath the `Header` on the DOM
 
 - You can run `npm run lab` to test your code. However, you should use both TDD and BDD to verify functionality
-- You can run `npm run submit` to save your work and push to github
